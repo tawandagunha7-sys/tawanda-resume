@@ -391,8 +391,13 @@
         }
 
         function downloadResume() {
-            alert("✅ Resume PDF downloaded! (In real deployment this would trigger the actual file)");
-        }
+    const link = document.createElement("a");
+    link.href = "Tawanda-Gunha-CV.pdf";
+    link.download = "Tawanda-Gunha-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
         function handleSubmit(e) {
             e.preventDefault();
