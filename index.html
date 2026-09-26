@@ -83,50 +83,157 @@
 <body class="tail-container">
 
     <!-- NAVBAR -->
-    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <div class="w-9 h-9 bg-[#1e40af] text-white rounded-2xl flex items-center justify-center text-xl font-bold">TG</div>
-                <div>
-                    <h1 class="text-2xl font-semibold heading-font tracking-tight">Tawanda Gunha</h1>
-                    <p class="text-xs text-slate-500 -mt-1">Guesthouse Manager</p>
-                </div>
+<nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+
+        <!-- BRAND -->
+        <div class="flex items-center gap-x-3">
+            <div class="w-9 h-9 bg-[#1e40af] text-white rounded-2xl flex items-center justify-center text-xl font-bold">
+                TG
             </div>
 
-            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a href="#about" class="nav-link text-slate-700 hover:text-[#1e40af]">About</a>
-                <a href="#experience" class="nav-link text-slate-700 hover:text-[#1e40af]">Experience</a>
-                <a href="#competencies" class="nav-link text-slate-700 hover:text-[#1e40af]">Skills</a>
-                <a href="#education" class="nav-link text-slate-700 hover:text-[#1e40af]">Education</a>
-                <a href="#contact" class="nav-link text-slate-700 hover:text-[#1e40af]">Contact</a>
-            </div>
+            <div>
+                <h1 class="text-2xl font-semibold heading-font tracking-tight">
+                    Tawanda Gunha
+                </h1>
 
-            <div class="flex items-center gap-x-4">
-                <a href="https://linkedin.com/in/tawanda-josphat-gunha-0598273b" target="_blank" class="flex items-center gap-x-2 text-slate-700 hover:text-[#1e40af] text-sm font-medium">
-                    <i class="fa-brands fa-linkedin text-xl"></i>
-                </a>
-                
-                <a href="#" onclick="downloadResume()" class="flex items-center px-6 py-2.5 bg-[#1e40af] hover:bg-blue-800 text-white text-sm font-semibold rounded-3xl">
-                    <i class="fa-solid fa-download mr-2"></i>
-                    Download PDF
-                </a>
-
-                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-slate-700">
-                    <i class="fa-solid fa-bars" id="menu-icon"></i>
-                </button>
+                <p class="text-xs text-slate-500 -mt-1">
+                    Guesthouse Manager
+                </p>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden border-t bg-white px-6 py-4">
-            <div class="flex flex-col gap-y-4 text-sm font-medium">
-                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
-                <a href="#experience" onclick="toggleMobileMenu()" class="py-2">Experience</a>
-                <a href="#competencies" onclick="toggleMobileMenu()" class="py-2">Skills</a>
-                <a href="#education" onclick="toggleMobileMenu()" class="py-2">Education</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
-            </div>
+        <!-- DESKTOP NAVIGATION -->
+        <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium">
+
+            <a href="#about" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                About
+            </a>
+
+            <a href="#competencies" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Skills
+            </a>
+
+            <a href="#experience" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Experience
+            </a>
+
+            <a href="#education" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Education
+            </a>
+
+            <a href="#certifications" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Certifications
+            </a>
+
+            <a href="#portfolio" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Portfolio
+            </a>
+
+            <a href="#additional-info" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                More
+            </a>
+
+            <a href="#contact" class="nav-link text-slate-700 hover:text-[#1e40af]">
+                Contact
+            </a>
+
         </div>
-    </nav>
+
+        <!-- ACTIONS -->
+        <div class="flex items-center gap-x-4">
+
+            <!-- LINKEDIN -->
+            <a href="https://linkedin.com/in/tawanda-josphat-gunha-0598273b"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex items-center gap-x-2 text-slate-700 hover:text-[#1e40af] text-sm font-medium">
+
+                <i class="fa-brands fa-linkedin text-xl"></i>
+
+            </a>
+
+            <!-- DOWNLOAD CV -->
+            <a href="#"
+               onclick="downloadResume()"
+               class="hidden sm:flex items-center px-6 py-2.5 bg-[#1e40af] hover:bg-blue-800 text-white text-sm font-semibold rounded-3xl">
+
+                <i class="fa-solid fa-download mr-2"></i>
+                Download CV
+
+            </a>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button onclick="toggleMobileMenu()"
+                    class="lg:hidden text-2xl text-slate-700"
+                    aria-label="Open navigation menu">
+
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t bg-white px-6 py-4">
+
+        <div class="flex flex-col gap-y-2 text-sm font-medium">
+
+            <a href="#about"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                About
+            </a>
+
+            <a href="#competencies"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Skills
+            </a>
+
+            <a href="#experience"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Experience
+            </a>
+
+            <a href="#education"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Education
+            </a>
+
+            <a href="#certifications"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Certifications
+            </a>
+
+            <a href="#portfolio"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Portfolio
+            </a>
+
+            <a href="#additional-info"
+               onclick="toggleMobileMenu()"
+               class="py-3 border-b border-slate-100">
+                Additional Information
+            </a>
+
+            <a href="#contact"
+               onclick="toggleMobileMenu()"
+               class="py-3">
+                Contact
+            </a>
+
+        </div>
+    </div>
+
+</nav>
+
 
     <!-- HERO -->
     <!-- HERO -->
